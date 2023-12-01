@@ -113,40 +113,57 @@ document.querySelector('.b-6').onclick = makeSix;*/
 //- Внутри цикла добавьте текущее название элемента формы (свойство name) в elementsList, добавляя дефис перед названием
 //- После цикла выведите текст с перечислением элементов в элемент с id practicum7, используя свойство textContent
 
-const paragraphSeven = document.getElementById('practicum7');
+/*const paragraphSeven = document.getElementById('practicum7');
 
 function makeSeven() {
 	const formTwo = document.forms[1];
-	const elements = formTwo.elements;
+	const formElements = formTwo.elements;
+	let elementsList = "";
+	for (let i = 0; i < formElements.length; i++) {
+		elementsList += ` - ${formElements[i].name}`;
+		paragraphSeven.textContent = elementsList;
+	};
 }
 
-document.querySelector('.b-7').onclick = makeSeven;
+document.querySelector('.b-7').onclick = makeSeven;*/
 
 //***************************************************************************************************************************************
 
 //Задание 8
 //Выведите перечисление названий (name) всех элементов первой формы на экран. В задании 5 вы нашли их количество.
 
-const paragraphEight = document.getElementById('practicum8');
+/*const paragraphEight = document.getElementById('practicum8');
 
 function makeEight() {
-	//Ваш код
+	const formOne = document.forms[0];
+	const formElements = formOne.elements;
+	let elementsList = "";
+	for (let i = 0; i < formElements.length; i++) {
+		elementsList += `- ${formElements[i].name}`;
+		paragraphEight.textContent = elementsList;
+	}
 }
 
-document.querySelector('.b-8').onclick = makeEight;
+document.querySelector('.b-8').onclick = makeEight;*/
 
 //***************************************************************************************************************************************
 
 //Задание 9
 //Найдите третью форму на странице. Выведите перечисление названий (name) всех элементов формы на экран.
 
-const paragraphNine = document.getElementById('practicum9');
+/*const paragraphNine = document.getElementById('practicum9');
 
 function makeNine() {
-	//Ваш код
+	const formThree = document.forms[2];
+	const formElements = formThree.elements;
+	let elementsList = "";
+	for (let i = 0; i < formElements.length; i++) {
+		elementsList += `- ${formElements[i].name}`;
+		paragraphNine.textContent = elementsList;
+	}
 }
 
-document.querySelector('.b-9').onclick = makeNine;
+document.querySelector('.b-9').onclick = makeNine;*/
 
 //***************************************************************************************************************************************
 
@@ -154,13 +171,15 @@ document.querySelector('.b-9').onclick = makeNine;
 //Выведите на экран значенеие radio кнопки четвёртой формы на странице
 //Подсказка: используйте коллекцию document.forms для доступа к формам, свойство elements для доступа к элементам формы и свойство value для получения значения radio кнопки
 
-const paragraphTen = document.getElementById('practicum10');
+/*const paragraphTen = document.getElementById('practicum10');
 
 function makeTen() {
-	//Ваш код
+	const formFour = document.forms[3];
+	const radioName = formFour.elements.fourthName.value;
+	paragraphTen.textContent = radioName;
 }
 
-document.querySelector('.b-10').onclick = makeTen;
+document.querySelector('.b-10').onclick = makeTen;*/
 
 //***************************************************************************************************************************************
 
