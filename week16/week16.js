@@ -193,13 +193,19 @@ document.querySelector('.b-10').onclick = makeTen;*/
 //- Внутри цикла получите значение каждой опции с помощью свойства value и добавьте его в optionsValues
 //- Выведите значения опций на страницу
 
-const paragraphEleven = document.getElementById('practicum11');
+/*const paragraphEleven = document.getElementById('practicum11');
 
 function makeEleven() {
-	//Ваш код
+	const formOne = document.forms[0];
+	const select = formOne.elements.firstSelect;
+	let optionsValues = "";
+	for (let i = 0; i < select.length; i++) {
+		optionsValues += `${select[i].value}; `;
+		paragraphEleven.textContent = optionsValues;
+	}
 }
 
-document.querySelector('.b-11').onclick = makeEleven;
+document.querySelector('.b-11').onclick = makeEleven;*/
 
 //***************************************************************************************************************************************
 
@@ -210,17 +216,22 @@ document.querySelector('.b-11').onclick = makeEleven;
 //- Получите доступ к чекбоксам с помощью form.elements и сохраните их в переменные
 //- Получите значения атрибутов id всех чекбоксов второй формы
 
-const paragraphTwelve = document.getElementById('practicum12');
+/*const paragraphTwelve = document.getElementById('practicum12');
 
 function makeTwelve() {
-	//Ваш код
+	const formTwo = document.forms[1];
+	const checkboxOne = formTwo.elements.checkboxOne;
+	const checkboxTwo = formTwo.elements.checkboxTwo;
+	const checkboxThree = formTwo.elements.checkboxThree;
+	paragraphTwelve.textContent = `${checkboxOne.getAttribute('id')}, ${checkboxTwo.getAttribute('id')}, ${checkboxThree.getAttribute('id')}`;
 }
 
-document.querySelector('.b-12').onclick = makeTwelve;
+document.querySelector('.b-12').onclick = makeTwelve;*/
 
 //***************************************************************************************************************************************
 
-// Задание 13
+// Задание 13 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  
+
 //Проверьте была ли выбрана кнопка четвёртой формы
 //Подсказка:
 //- Получите доступ к форме с помощью document.forms и сохраните её в переменную
@@ -229,17 +240,24 @@ document.querySelector('.b-12').onclick = makeTwelve;
 //- Если кнопка выбрана, выведите сообщение "Кнопка выбрана" на страницу
 //- Если кнопка не выбрана, выведите сообщение "Кнопка не выбрана" на страницу
 
-const paragraphThirteen = document.getElementById('practicum13');
+/*const paragraphThirteen = document.getElementById('practicum13');
 
-function checkButton(e) {
-	//Ваш код
+function checkButton() {
+	const formFour = document.forms[3];
+	const radio = formFour.elements.fourthName;
+	if (radio.checked) {
+		paragraphThirteen.textContent = "Кнопка выбрана";
+	} 
+	else {
+		paragraphThirteen.textContent = "Кнопка не выбрана";
+	};
 }
 
-document.querySelector('.b-13').addEventListener('click', checkButton);
+document.querySelector('.b-13').addEventListener('click', checkButton);*/
 
 //***************************************************************************************************************************************
 
-//Задание 14
+//Задание 14 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //Проверьте какой вариант выбран в первой форме
 //Подсказка:
 //- Получите доступ к форме с помощью document.forms и сохраните её в переменную
@@ -251,13 +269,22 @@ document.querySelector('.b-13').addEventListener('click', checkButton);
 //- Если выбран второй вариант, выведите сообщение "Выбран второй вариант" на страницу
 //- Если выбран третий вариант, выведите сообщение "Выбран третий вариант" на страницу
 
-const paragraphFourteen = document.getElementById('practicum14');
+/*const paragraphFourteen = document.getElementById('practicum14');
 
 function checkOption() {
-	//Ваш код
+	const formOne = document.forms[0];
+	const selectOne = formOne.elements.firstSelect;
+	selectOne.selectedIndex = 1;
+	const value = selectOne.value;
+	if (value.checked) {
+		paragraphFourteen.textContent = "Выбран первый вариант";
+	}
+	else {
+		paragraphFourteen.textContent = "Выбран второй вариант";
+	}
 }
 
-document.querySelector('.b-14').onclick = checkOption;
+document.querySelector('.b-14').onclick = checkOption;*/
 
 //***************************************************************************************************************************************
 
@@ -269,11 +296,13 @@ document.querySelector('.b-14').onclick = checkOption;
 //- Используйте свойство selectedIndex элемента select, чтобы установить выбранный индекс опции по умолчанию
 //- Установите значение selectedIndex равным индексу опции, которую вы хотите выбрать по умолчанию
 
-function makeFifteen() {
-	//Ваш код
+/*function makeFifteen() {
+	const formOne = document.forms[0];
+	const select = formOne.elements.firstSelect;
+	select.selectedIndex = 2;
 }
 
-makeFifteen();
+makeFifteen();*/
 
 //***************************************************************************************************************************************
 
@@ -285,11 +314,13 @@ makeFifteen();
 //- Используйте свойство checked элемента checkbox, чтобы установить его выбранным по умолчанию
 //- Установите значение checked равным true для выбранного варианта
 
-function makeSixteen() {
-	//Ваш код
+/*function makeSixteen() {
+	const formTwo = document.forms[1];
+	const checkbox = formTwo.elements.checkboxThree;
+	checkbox.checked = true;
 }
 
-makeSixteen();
+makeSixteen();*/
 
 //***************************************************************************************************************************************
 
@@ -302,13 +333,29 @@ makeSixteen();
 //- Добавьте слушатель события submit к форме, чтобы выполнить проверку перед отправкой
 //- В обработчике события вызовите метод event.preventDefault() для отмены отправки формы в случае ошибки
 
-const formOne = document.forms.formOne;
+/*const formOne = document.forms.formOne;
+const userName = formOne.elements.firstName;
+const email = formOne.elements.firstEmail;
+const select = formOne.elements.firstSelect;
+const error = document.getElementById('errorMessage');
+const errorMessage = [];
 
 formOne.addEventListener('submit', function (event) {
 	event.preventDefault(); //Отмена отправки
+	if (!userName.value === true ) {
+	errorMessage.push("Необходимо заполнить поле с именем");
+};
+	if (!email.value === true) {
+	errorMessage.push("Необходимо заполнить поле с адресом");
+};
+	if (select.checked === false) {
+	errorMessage.push("Необходимо выбрать опцию");
+}
 
-	//Ваш код
-});
+if (errorMessage.length > 0) {
+	error.textContent = errorMessage.join('\n');
+}
+});*/
 
 //***************************************************************************************************************************************
 
@@ -320,10 +367,12 @@ formOne.addEventListener('submit', function (event) {
 //- Добавьте слушатель события addEventListener на первую форму, как вы делали в задании 17
 //- В обработчике события вызовите метод event.preventDefault() для отмены отправки формы в случае ошибки
 
+/*const formOne = document.forms.formOne;
+
 formOne.addEventListener('submit', function (event) {
 	event.preventDefault(); //Отмена отправки
-	//Ваш код
-});
+	formOne.reset();
+});*/
 
 //***************************************************************************************************************************************
 
@@ -335,11 +384,13 @@ formOne.addEventListener('submit', function (event) {
 //- В обработчике события, используя условные операторы (if), проверьте выбранную опцию
 //- В зависимости от выбранной опции, измените цвет фона страницы, используя свойство document.body.style.backgroundColor
 
-//const selectElement = //Ваш код
+/*const selectElement = document.getElementById("firstSelect");
 
-// selectElement.onchange = function () {
-// 	//Ваш код
-// };
+selectElement.onchange = function () {
+	if (selectElement.selectedIndex = 2) {
+		document.body.style.backgroundColor = "yellow";
+	}
+};*/
 
 //***************************************************************************************************************************************
 
@@ -352,34 +403,42 @@ formOne.addEventListener('submit', function (event) {
 //- В обработчике события, используя регулярное выражение (RegExp), проверьте введенное значение поля Email
 //- В зависимости от результата проверки, измените стиль поля Email (например, установите класс с ошибкой) и отобразите сообщение об ошибке в элементе <p> (добавьте элемент самостоятельно) с помощью свойства textContent.
 
-//const emailInput = //Ваш код
-// const errorMessage = document.getElementById('errorMessage');
+/*const formOne = document.forms[0];
+const emailInput = formOne.elements.firstEmail;
+const errorMessage = document.getElementById('errorMessage');
 
-// emailInput.oninput = function () {
-	//Ваш код
-// };
+emailInput.oninput = function () {
+	const mailFormat = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
+	if (mailFormat.test(emailInput.value) == false) {
+	emailInput.style.borderColor = 'red';	
+	errorMessage.textContent = "Ошибочный формат";
+	} else {
+	emailInput.style.borderColor = 'green';
+	}
+};*/
 
 //***************************************************************************************************************************************
 
 //Задание 21
 //При отправке второй формы выполняется проверка всех чекбоксов. Если ни один из чекбоксов не выбран, отмените отправку формы и выведите сообщение об ошибке в элементе с id "result21".
 
-document.querySelector('.b-21').onclick = function (event) {
+/*document.querySelector('.b-21').onclick = function (event) {
 	const checkboxes = document.forms.formTwo.querySelectorAll('input[type="checkbox"]');
 	let isChecked = false;
 
 	checkboxes.forEach(function (checkbox) {
-		if (checkbox.checked) {
-			isChecked = true;
-		}
+	if (checkbox.checked) {
+		isChecked = true;
+	}
 	});
 
 	if (!isChecked) {
-		//Ваш код
+		event.preventDefault();
+		document.getElementById('result21').textContent = "Проверьте еще раз";
 	} else {
 		document.getElementById('result21').textContent = 'Проверка пройдена';
 	}
-};
+};*/
 
 //***************************************************************************************************************************************
 
