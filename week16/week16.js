@@ -230,7 +230,7 @@ document.querySelector('.b-12').onclick = makeTwelve;*/
 
 //***************************************************************************************************************************************
 
-// Задание 13 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  
+// Задание 13  
 
 //Проверьте была ли выбрана кнопка четвёртой формы
 //Подсказка:
@@ -243,6 +243,7 @@ document.querySelector('.b-12').onclick = makeTwelve;*/
 /*const paragraphThirteen = document.getElementById('practicum13');
 
 function checkButton() {
+	event.preventDefault();
 	const formFour = document.forms[3];
 	const radio = formFour.elements.fourthName;
 	if (radio.checked) {
@@ -251,7 +252,7 @@ function checkButton() {
 	else {
 		paragraphThirteen.textContent = "Кнопка не выбрана";
 	};
-}
+};
 
 document.querySelector('.b-13').addEventListener('click', checkButton);*/
 
@@ -276,12 +277,14 @@ function checkOption() {
 	const selectOne = formOne.elements.firstSelect;
 	selectOne.selectedIndex = 1;
 	const value = selectOne.value;
-	if (value.checked) {
+	if (selectOne.selectedIndex = 0) {
 		paragraphFourteen.textContent = "Выбран первый вариант";
 	}
-	else {
+	else if (selectOne.selectedIndex = 1) {
 		paragraphFourteen.textContent = "Выбран второй вариант";
-	}
+	} 
+	else 
+		paragraphFourteen.textContent = "Выбран третий вариант";
 }
 
 document.querySelector('.b-14').onclick = checkOption;*/
