@@ -270,24 +270,24 @@ document.querySelector('.b-13').addEventListener('click', checkButton);*/
 //- Если выбран второй вариант, выведите сообщение "Выбран второй вариант" на страницу
 //- Если выбран третий вариант, выведите сообщение "Выбран третий вариант" на страницу
 
-/*const paragraphFourteen = document.getElementById('practicum14');
+const paragraphFourteen = document.getElementById('practicum14');
 
 function checkOption() {
 	const formOne = document.forms[0];
 	const selectOne = formOne.elements.firstSelect;
 	selectOne.selectedIndex = 1;
-	const value = selectOne.value;
-	if (selectOne.selectedIndex = 0) {
+	let value = selectOne.value;
+	if (value = "Опция 1") {
 		paragraphFourteen.textContent = "Выбран первый вариант";
 	}
-	else if (selectOne.selectedIndex = 1) {
+	else if (value = "Опция 2") {
 		paragraphFourteen.textContent = "Выбран второй вариант";
 	} 
 	else 
 		paragraphFourteen.textContent = "Выбран третий вариант";
 }
 
-document.querySelector('.b-14').onclick = checkOption;*/
+document.querySelector('.b-14').onclick = checkOption;
 
 //***************************************************************************************************************************************
 
@@ -422,7 +422,7 @@ emailInput.oninput = function () {
 
 //***************************************************************************************************************************************
 
-//Задание 21 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//Задание 21
 //При отправке второй формы выполняется проверка всех чекбоксов. Если ни один из чекбоксов не выбран, отмените отправку формы и выведите сообщение об ошибке в элементе с id "result21".
 
 /*document.querySelector('.b-21').onclick = function (event) {
@@ -465,18 +465,18 @@ emailInput.oninput = function () {
 //При выборе опции "Я хочу зарегистрироваться" в четвёртой форме кнопка должна быть разблокирована. В противном случае, сделайте кнопку отправки формы заблокированной.
 //Подсказка: используйте свойство disabled
 
-/*const buttonFormFour = document.forms[3].elements.fourthButton;
+const buttonFormFour = document.forms[3].elements.fourthButton;
 const formFour = document.forms[3].elements.fourthName;
 
+formFour.onchange = function () {
 	if (!formFour.checked) {
-	buttonFormFour.disabled = true;
+		buttonFormFour.disabled = true;
 	}
 	else {
-	buttonFormFour.disabled = false;
+		buttonFormFour.disabled = false;
 	}
-	console.log(formFour);
-	console.log(buttonFormFour);*/
-	
+};
+
 //***************************************************************************************************************************************
 
 //Задание 24
@@ -550,24 +550,24 @@ selectFormThree.addEventListener('change', function () {
 
 //***************************************************************************************************************************************
 
-//Задание 29 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//Задание 29
 //При заполнении всех полей третьей формы выведите их значения в консоль. Используйте JavaScript без использования объекта FormData.
 
-// const formThree = document.forms.formThree;
-// const nameInputThree = form.elements.thirdName;
-// const emailInputThree = form.elements.thirdEmail;
+/*const formThree = document.forms.formThree;
+const nameInputThree = formThree.elements.thirdName;
+const emailInputThree = formThree.elements.thirdEmail;
 
-// function handleSubmitTwentyNine(event) {
-// 	event.preventDefault();
+function handleSubmitTwentyNine(event) {
+	event.preventDefault();
 
-// 	if (nameInputThree.value && emailInputThree.value) {
-// 		console.log(`${nameInputThree.value}`, `${emailInputThree.value}`);
-// 	} else {
-// 		console.log('Пожалуйста, заполните все поля формы.');
-// 	}
-// }
+	if (nameInputThree.value && emailInputThree.value) {
+		console.log(`${nameInputThree.value}`, `${emailInputThree.value}`);
+	} else {
+		console.log('Пожалуйста, заполните все поля формы.');
+	}
+}
 
-// formThree.addEventListener('submit', handleSubmitTwentyNine);
+formThree.addEventListener('submit', handleSubmitTwentyNine);*/
 
 //***************************************************************************************************************************************
 
