@@ -258,7 +258,7 @@ document.querySelector('.b-13').addEventListener('click', checkButton);*/
 
 //***************************************************************************************************************************************
 
-//Задание 14 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//Задание 14
 //Проверьте какой вариант выбран в первой форме
 //Подсказка:
 //- Получите доступ к форме с помощью document.forms и сохраните её в переменную
@@ -270,24 +270,24 @@ document.querySelector('.b-13').addEventListener('click', checkButton);*/
 //- Если выбран второй вариант, выведите сообщение "Выбран второй вариант" на страницу
 //- Если выбран третий вариант, выведите сообщение "Выбран третий вариант" на страницу
 
-const paragraphFourteen = document.getElementById('practicum14');
+/*const paragraphFourteen = document.getElementById('practicum14');
 
 function checkOption() {
 	const formOne = document.forms[0];
 	const selectOne = formOne.elements.firstSelect;
 	selectOne.selectedIndex = 1;
-	let value = selectOne.value;
-	if (value = "Опция 1") {
+	const value = selectOne.value;
+	if (selectOne.value === "Опция 1") {
 		paragraphFourteen.textContent = "Выбран первый вариант";
 	}
-	else if (value = "Опция 2") {
+	else if (selectOne.value === "Опция 2") {
 		paragraphFourteen.textContent = "Выбран второй вариант";
 	} 
 	else 
 		paragraphFourteen.textContent = "Выбран третий вариант";
 }
 
-document.querySelector('.b-14').onclick = checkOption;
+document.querySelector('.b-14').onclick = checkOption;*/
 
 //***************************************************************************************************************************************
 
@@ -461,21 +461,23 @@ emailInput.oninput = function () {
 
 //***************************************************************************************************************************************
 
-//Задание 23 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//Задание 23 
 //При выборе опции "Я хочу зарегистрироваться" в четвёртой форме кнопка должна быть разблокирована. В противном случае, сделайте кнопку отправки формы заблокированной.
 //Подсказка: используйте свойство disabled
 
-const buttonFormFour = document.forms[3].elements.fourthButton;
+/*const buttonFormFour = document.forms[3].elements.fourthButton;
 const formFour = document.forms[3].elements.fourthName;
+buttonFormFour.disabled = true;
 
-formFour.onchange = function () {
+formFour.onchange = function (e) {
+	e.preventDefault();
 	if (!formFour.checked) {
 		buttonFormFour.disabled = true;
 	}
 	else {
 		buttonFormFour.disabled = false;
 	}
-};
+};*/
 
 //***************************************************************************************************************************************
 
@@ -571,7 +573,7 @@ formThree.addEventListener('submit', handleSubmitTwentyNine);*/
 
 //***************************************************************************************************************************************
 
-//Задание 30 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//Задание 30
 //При отправке второй формы выведите значения выбранных вариантов в консоль
 
 /*const formTwo = document.forms.formTwo;
